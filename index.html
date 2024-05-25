@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mayank's Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Oswald:wght@300;400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="profile-pic-container">
+      <img src="profpicture.jpg" alt="Profile Picture" class="profile-pic">
+    </div>
+    <div class="header-content">
+      <h1>Mayank</h1>
+      <nav>
+        <ul>
+          <li><button id="about-btn">About</button></li>
+          <li><button id="languages-btn">Languages</button></li>
+          <li><button id="experiences-btn">Experiences</button></li>
+          <li><button id="skills-btn">Skills</button></li>
+          <li><button id="projects-btn">Projects</button></li>
+          <li><button id="contact-btn">Contact</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section id="about" class="show">
+      <div class="card">
+        <h2>About Me</h2>
+        <p>I am a passionate and innovative web developer with a strong background in computer science. I love creating beautiful and functional websites that make a difference.</p>
+      </div>
+    </section>
+    <section id="languages">
+      <div class="card">
+        <h2>Languages</h2>
+        <ul>
+          <li>English</li>
+          <li>Hindi</li>
+          <li>Odia</li>
+          <li>Spanish (Basic)</li>
+        </ul>
+      </div>
+    </section>
+    <section id="experiences">
+      <div class="card">
+        <h2>Experiences</h2>
+        <ul>
+          <li>Volunteer in Art of Living</li>
+          <li>Completed AI chatbot making course</li>
+          <li>Exposure to different cultures in Singapore, Vizag, and Delhi</li>
+        </ul>
+      </div>
+    </section>
+    <section id="skills">
+      <div class="card">
+        <h2>Skills</h2>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Node.js</li>
+        </ul>
+      </div>
+    </section>
+    <section id="projects">
+      <div class="card">
+        <h2>Projects</h2>
+        <div class="project-card">
+          <h3>College and Career Selection</h3>
+          <p>A project to help intermediate students select their college and career based on their marks and entrance exam ranks.</p>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="card">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Made with ❤️ by Mayank</p>
+    <ul>
+      <li><a href="https://www.instagram.com/_mayday_mayank_?igsh=djF1d3J5dWd0b3ow&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/mayank-behera-5249771b4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+      <li><a href="https://github.com/LuminousMayank" target="_blank"><i class="fab fa-github"></i></a></li>
+    </ul>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var sections = document.querySelectorAll("section");
+
+      document.getElementById("about-btn").addEventListener("click", function() {
+        showSection("about");
+      });
+
+      document.getElementById("languages-btn").addEventListener("click", function() {
+        showSection("languages");
+      });
+
+      document.getElementById("experiences-btn").addEventListener("click", function() {
+        showSection("experiences");
+      });
+
+      document.getElementById("skills-btn").addEventListener("click", function() {
+        showSection("skills");
+      });
+
+      document.getElementById("projects-btn").addEventListener("click", function() {
+        showSection("projects");
+      });
+
+      document.getElementById("contact-btn").addEventListener("click", function() {
+        showSection("contact");
+      });
+
+      function showSection(sectionId) {
+        for (var i = 0; i < sections.length; i++) {
+          sections[i].classList.remove("show");
+        }
+        document.getElementById(sectionId).classList.add("show");
+      }
+    });
+  </script>
+</body>
+</html>
